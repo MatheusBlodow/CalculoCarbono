@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="199dp">
+
+        <TextView
+            android:id="@+id/tha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  t/há \n  2400"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/espaco"
+            android:layout_width="match_parent"
+            android:layout_height="29dp" />
+
+        <TextView
+            android:id="@+id/mos"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text=" %MOS"
+            android:textSize="9pt"/>
+
+        <EditText
+            android:id="@+id/mosText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/adicaoKgHaAno"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text=" Adição kg/há/ano de C" />
+
+        <EditText
+            android:id="@+id/adicaoKgHaAnotext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="" />
+
+        <Button
+            android:id="@+id/calcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular" />
+
+        <TextView
+            android:id="@+id/thaMos"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text=" t/há de MOS = \n"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/tCHa"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text=" t/C/há = \n"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/tempoEstimadoAumentoCmos"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text=" Tempo estimado de aumento de C/MOS = \n"
+            android:textSize="8pt" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
