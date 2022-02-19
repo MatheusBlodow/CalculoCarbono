@@ -28,7 +28,7 @@
 19        android:testOnly="true"
 20        android:theme="@style/Theme.Calculo" >
 20-->C:\Users\Matheus\AndroidStudioProjects\Calculo\app\src\main\AndroidManifest.xml:11:9-45
-21        <activity android:name="com.example.calculo.MainActivity" >
+21        <activity android:name="com.example.calculo.TelaCalculo" >
 21-->C:\Users\Matheus\AndroidStudioProjects\Calculo\app\src\main\AndroidManifest.xml:12:9-18:20
 21-->C:\Users\Matheus\AndroidStudioProjects\Calculo\app\src\main\AndroidManifest.xml:12:19-47
 22            <intent-filter>

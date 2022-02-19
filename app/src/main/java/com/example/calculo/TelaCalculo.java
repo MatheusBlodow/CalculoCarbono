@@ -7,15 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-public class MainActivity extends AppCompatActivity {
+public class TelaCalculo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button btCalcular = (Button) findViewById(R.id.calcular);
+        setContentView(R.layout.activity_tela_calculo);
+        Button btCalcular = (Button) findViewById(R.id.btnCalcular);
         btCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void calcular(){
+        Calculo calculo = new Calculo();
+
         TextView editMos = (TextView) findViewById(R.id.mosText);
-        TextView editAdicaoKgHaAnoText = (TextView) findViewById(R.id.adicaoKgHaAnotext);
+        TextView editAdicaoKgHaAnoText = (TextView) findViewById(R.id.adicaoKgHaAnoText);
         TextView thaMos = (TextView) findViewById(R.id.thaMos);
         TextView tCHa = (TextView) findViewById(R.id.tCHa);
         TextView tempoEstimadoAumentoCmos = (TextView) findViewById(R.id.tempoEstimadoAumentoCmos);
@@ -45,16 +45,14 @@ public class MainActivity extends AppCompatActivity {
             }
             editAdicaoKgHaAnoText.setError("Campo vazio");
         }else {
-            double mos = Double.parseDouble(editMos.getText().toString());
-            double adicaoKgHaAnoText = Double.parseDouble(editAdicaoKgHaAnoText.getText().toString());
+            calculo.setMos(Double.parseDouble(editMos.getText().toString()));
+            calculo.setAdicaoKgHaAnoText(Double.parseDouble(editAdicaoKgHaAnoText.getText().toString()));
 
-            double conta1 = 2400 * (mos / 100);
-            double conta2 = conta1 / 1.724;
-            double conta3 = conta2 / (adicaoKgHaAnoText / 1000);
+            calculo.Calcular();
 
-            thaMos.setText(" t/há de MOS = " + conta1);
-            tCHa.setText(" t/C/há = " + conta2);
-            tempoEstimadoAumentoCmos.setText("  Tempo estimado de aumento de C/MOS = " + " " + conta3);
+            thaMos.setText(" t/há de MOS = " + calculo.getConta1());
+            tCHa.setText(" t/C/há = " + calculo.getConta2());
+            tempoEstimadoAumentoCmos.setText("  Tempo estimado de aumento de C/MOS = " + " " + calculo.getConta3());
         }
     }
 

@@ -1,5 +1,5 @@
 com/example/calculo/BuildConfig.java
  com.example.calculo.BuildConfig
 com/example/calculo/MainActivity.java
- com.example.calculo.MainActivity
- com.example.calculo.MainActivity$1
+ com.example.calculo.TelaCalculo
+ com.example.calculo.TelaCalculo$1
